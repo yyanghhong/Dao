@@ -9,7 +9,7 @@ function main(){
 
     divElement = document.getElementById("villains")
     if (divElement) {
-        console.log("is found")
+        console.log("is  found")
         divElement.appendChild(app.view)
 
         const Seraphim = PIXI.Sprite.from("ACTUALPNG.png")

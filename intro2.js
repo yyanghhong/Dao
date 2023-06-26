@@ -1,4 +1,5 @@
-
+const Seraphim = PIXI.Sprite.from("ACTUALPNG.png")
+const Nahas = PIXI.Sprite.from('sample.png')
 function main(){
     i = 0
     var intro = true
@@ -11,7 +12,7 @@ function main(){
     console.log("is  found")
     divElement.appendChild(app.view)
 
-    const Seraphim = PIXI.Sprite.from("ACTUALPNG.png")
+ 
     Seraphim.x = 100
     Seraphim.y = 100
     Seraphim.scale.x = 0.75;
@@ -19,7 +20,7 @@ function main(){
     Seraphim.position.set(1,1)
     app.stage.addChild(Seraphim)
 
-    const Nahas = PIXI.Sprite.from('sample.png')
+
     Nahas.x = 400
     Nahas.y = 100
     Nahas.position.set(400,100)
@@ -27,7 +28,9 @@ function main(){
     Nahas.scale.y = 1.5
     Nahas.zIndex = 999
     app.stage.addChild(Nahas)
-    
+    Nahas.visible = false
+    Seraphim.visible = false
+
 }
  function Intro_Sequence(){
     i = i + 1
@@ -38,24 +41,30 @@ function main(){
         document.getElementById('Title').innerHTML = "You are currently in the Three Realms"
     }
     if(i == 3){
-        document.getElementById('Title').innerHTML = "It is a world of wonder Of magic and gods"
+        document.getElementById('Title').innerHTML = "It was a world of wonder. Of magic and gods"
     }
     if(i == 4){
         document.getElementById('Title').innerHTML = "But also of Turmoil"
         document.getElementById("Title").style.color = "red";
     }
     if(i == 5){
-        document.getElementById('Title').innerHTML = "Ages ago, two mighty beings appeared in the realms"
+        document.getElementById('Title').innerHTML = "Ages ago, two mighty beings appeared in the realm"
     }
     if(i == 6){
      
     document.getElementById('Title').innerHTML = "Seraphim, lord of Light and Virtue"
     document.getElementById('Title').style.color = "yellow"   
+    Seraphim.visible = true
     }
     if(i == 7){
         document.getElementById('Title').innerHTML = "And Nahas, demon of knowledge and sin"
         document.getElementById('Title').style.color = "crimson"
-
+        Nahas.visible = true
+    }
+    if(i == 8){
+        document.getElementById('Title').innerHTML = "These beings waged war for centuries, their conflict tearing"+ 
+        " the world into three different realms "
+        document.getElementById('Title').style.color = "blue"
     }
 }
 

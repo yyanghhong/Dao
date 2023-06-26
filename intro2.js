@@ -8,29 +8,26 @@ function main(){
     height: screenHeight*3/4})
 
     divElement = document.getElementById("villains")
-    if (divElement) {
-        console.log("is  found")
-        divElement.appendChild(app.view)
+    console.log("is  found")
+    divElement.appendChild(app.view)
 
-        const Seraphim = PIXI.Sprite.from("ACTUALPNG.png")
-        Seraphim.x = 100
-        Seraphim.y = 100
-        Seraphim.scale.x = 0.75;
-        Seraphim.scale.y = 0.75;
-        Seraphim.position.set(1,1)
-        app.stage.addChild(Seraphim)
+    const Seraphim = PIXI.Sprite.from("ACTUALPNG.png")
+    Seraphim.x = 100
+    Seraphim.y = 100
+    Seraphim.scale.x = 0.75;
+    Seraphim.scale.y = 0.75;
+    Seraphim.position.set(1,1)
+    app.stage.addChild(Seraphim)
 
-        const Nahas = PIXI.Sprite.from('sample.png')
-        Nahas.x = 400
-        Nahas.y = 100
-        Nahas.position.set(400,100)
-        Nahas.scale.x = 1.5
-        Nahas.scale.y = 1.5
-        Nahas.zIndex = 999
-        app.stage.addChild(Nahas)
-    } else {
-        console.log("not found")
-    }
+    const Nahas = PIXI.Sprite.from('sample.png')
+    Nahas.x = 400
+    Nahas.y = 100
+    Nahas.position.set(400,100)
+    Nahas.scale.x = 1.5
+    Nahas.scale.y = 1.5
+    Nahas.zIndex = 999
+    app.stage.addChild(Nahas)
+    
 }
  function Intro_Sequence(){
     i = i + 1

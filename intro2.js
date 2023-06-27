@@ -4,6 +4,11 @@ const Chaos = PIXI.Sprite.from('Chaos-spirit.png')
 const Brightstar = PIXI.Sprite.from('Brightstar.png')
 const LostFromLight = PIXI.Sprite.from("Lost_From_Light.png") 
 function main(){
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+          Intro_Sequence();
+        }
+      });
     i = 0
     var intro = true
     const screenWidth = screen.width;
@@ -74,7 +79,7 @@ function main(){
     Seraphim.visible = true
     }
     if(i == 7){
-        document.getElementById('Title').innerHTML = "And Nahas, demon of knowledge and sin"
+        document.getElementById('Title').innerHTML = "And Nahas, demon of knowledge and fate"
         document.getElementById('Title').style.color = "crimson"
         Nahas.visible = true
     }
@@ -143,7 +148,12 @@ function main(){
         document.getElementById('Title').style.color = "crimson"
     }
     if(i == 23){
-        document.getElementById('Title').innerHTML = "The choice is yours"
+        document.getElementById('Title').innerHTML = "The choice is yours."
+    }
+    if(i == 24){
+        Brightstar.visible = false
+        LostFromLight.visible = false
+        document.getElementById("Title").style.display = "none"
     }
 }
 

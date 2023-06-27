@@ -3,12 +3,14 @@ const Nahas = PIXI.Sprite.from('sample.png')
 const Chaos = PIXI.Sprite.from('Chaos-spirit.png')
 const Brightstar = PIXI.Sprite.from('Brightstar.png')
 const LostFromLight = PIXI.Sprite.from("Lost_From_Light.png") 
+function Introductionkey(event) {
+    if (event.key === 'Enter') {
+      Intro_Sequence();
+    }
+  }
 function main(){
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-          Intro_Sequence();
-        }
-      });
+
+    document.addEventListener('keydown', Introductionkey);
     i = 0
     var intro = true
     const screenWidth = screen.width;
@@ -154,6 +156,7 @@ function main(){
         Brightstar.visible = false
         LostFromLight.visible = false
         document.getElementById("Title").style.display = "none"
+        document.removeEventListener('keydown', Introductionkey);
     }
 }
 

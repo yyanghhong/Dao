@@ -18,3 +18,21 @@ body{
     position: relative;
     z-index: 1;
 }
+#attack {
+    color:blue;
+    position: absolute;
+    width: 10%;
+    height: 10%;
+  }
+#Items {
+    color:blue;
+    position: absolute;
+    width: 10%;
+    height: 10%;
+  }
+#Actions {
+    color:blue;
+    position: absolute;
+    width: 10%;
+    height: 10%;
+  }

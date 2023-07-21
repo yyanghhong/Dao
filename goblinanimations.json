@@ -1,0 +1,95 @@
+{"frames": {
+
+"Goblin_Slice 1.png":
+{
+	"frame": {"x":0,"y":0,"w":48,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":48},
+	"sourceSize": {"w":48,"h":48}
+},
+"Goblin_Slice 2.png":
+{
+	"frame": {"x":48,"y":0,"w":48,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":48},
+	"sourceSize": {"w":48,"h":48}
+},
+"Goblin_Slice 3.png":
+{
+	"frame": {"x":96,"y":0,"w":48,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":48},
+	"sourceSize": {"w":48,"h":48}
+},
+"Goblin_Slice 4.png":
+{
+	"frame": {"x":144,"y":0,"w":48,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":48},
+	"sourceSize": {"w":48,"h":48}
+},
+"Goblin_Slice 5.png":
+{
+	"frame": {"x":192,"y":0,"w":64,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":48},
+	"sourceSize": {"w":64,"h":48}
+},
+"Goblin_Slice 6.png":
+{
+	"frame": {"x":256,"y":0,"w":48,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":48},
+	"sourceSize": {"w":48,"h":48}
+},
+"Goblin_Slice 7.png":
+{
+	"frame": {"x":304,"y":0,"w":48,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":48},
+	"sourceSize": {"w":48,"h":48}
+},
+"Goblin_Slice 8.png":
+{
+	"frame": {"x":352,"y":0,"w":48,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":48},
+	"sourceSize": {"w":48,"h":48}
+},
+"Goblin_Slice 9.png":
+{
+	"frame": {"x":400,"y":0,"w":64,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":48},
+	"sourceSize": {"w":64,"h":48}
+},
+"Goblin_Slice 10.png":
+{
+	"frame": {"x":464,"y":0,"w":48,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":48},
+	"sourceSize": {"w":48,"h":48}
+}},
+"animations": {
+	"Goblin_Slice ": ["Goblin_Slice 1.png","Goblin_Slice 2.png","Goblin_Slice 3.png","Goblin_Slice 4.png","Goblin_Slice 5.png","Goblin_Slice 6.png","Goblin_Slice 7.png","Goblin_Slice 8.png","Goblin_Slice 9.png","Goblin_Slice 10.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "goblinanimations.png",
+	"format": "RGBA8888",
+	"size": {"w":512,"h":48},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:a848ae07a6558f03de5a2b24ed1f51e0:2cc2a83e796306f4c95e64eb30e25360:d11c6cad57c924c04c10f4b21a8876b5$"
+}
+}

@@ -64,6 +64,7 @@ hitormiss.visible = false
 const container = new PIXI.Container();
 const BattleBackground = new PIXI.Graphics();
 const sprite1 = PIXI.Sprite.from('enemy_placeholder.png');
+
 sprite1.scale.x = 0.25
 sprite1.scale.y = 0.25
 sprite1.x = 1000
@@ -116,8 +117,10 @@ sprite1.on('mousedown', ()=>{
   hitormiss.visible = true
   if(attackchance < 5){
     updateText2("Miss")
+    sprite1.eventMode = "passive"
   }
   else{
     updateText2("Hit")
+    sprite1.eventMode = "Passive"
   }
 })

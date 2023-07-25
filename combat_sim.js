@@ -12,7 +12,7 @@ var oldman = new mob("Old man", 5, 0, 0, "Weakest enemy in the world.  An old, f
 var scholar = new mob("kkk", 50, 10, 10, "A scholar of Nahas.  Knows a fair bit of Dark magic and Weave")
 var silentwitness = new mob('Silent Witness', 80, 3, 20, "On the night of the wedding, the attendees watched in fear as the Beast"+
 " performed his vile acts.  Their eyes are blind from the horror and their mouths sewn shut, the Beast will never face punishment.")
-
+var moblist = [slime, goblin, oldman, scholar, silentwitness]
 var weapon = function(name, damage, accuracy, description, ability) {
   this.name = name;
   this.damage = damage+" dmg";
@@ -39,20 +39,11 @@ const BattleArea = new PIXI.Application({  width: screenWidth,
 height: screenHeight})
 document.body.appendChild(BattleArea.view);
 const style = new PIXI.TextStyle({
-  fontFamily: 'Arial',
-  fontSize: 36,
-  // fontWeight: 'bold',
-  // fill: ['#ffffff', '#00ff99'], // gradient
-  stroke: '#4a1850',
-  strokeThickness: 5,
-  dropShadow: true,
-  dropShadowColor: '#000000',
-  dropShadowBlur: 4,
-  // dropShadowAngle: Math.PI / 6,
-  // dropShadowDistance: 6,
-  wordWrap: true,
-  wordWrapWidth: 440,
-  lineJoin: 'round',
+  fill: "#e50b0b",
+  fillGradientType: 1,
+  fontSize: 30,
+  fontVariant: "small-caps",
+  fontWeight: 600
 });
 const battletext = new PIXI.Text('It is the beginning', style);
 battletext.x = 500;
@@ -63,7 +54,12 @@ hitormiss.y = 100
 hitormiss.visible = false
 const container = new PIXI.Container();
 const BattleBackground = new PIXI.Graphics();
-const sprite1 = PIXI.Sprite.from('enemy_placeholder.png');
+var combatmob = moblist[0]
+let sprite1
+if(combatmob = slime){
+  sprite1 = PIXI.Sprite.from('Slime-Green-Slice1.png');
+}
+
 
 sprite1.scale.x = 0.25
 sprite1.scale.y = 0.25
@@ -109,7 +105,7 @@ function updateText2(newText) {
   hitormiss.text = newText;
 }
 sprite3.on('mousedown', () => {
-  updateText("longsword");
+  updateText("-longsword");
   sprite1.eventMode = 'static'
   });
 sprite1.on('mousedown', ()=>{

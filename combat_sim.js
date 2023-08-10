@@ -22,7 +22,7 @@ var weapon = function(name, damage, accuracy, description, ability) {
 }
 var longsword = new weapon("Longsword", 1+"-"+8, 70, "The quintessential weapon of any warrior.  Does moderate damage and has decent accuracy", "none")
 var dagger = new weapon('Dagger',1+"-"+4, 90, "Sex", "Automatic crit when attacking from suprise")
-var bow = new weapon("Bow",1+'-'+12, 60, "A weapon meant for masters.", "Accuracy rises by 10 for every skill level")
+var bow = new weapon("Bow",1+'-'+12, 50, "A weapon meant for masters.", "Accuracy rises by 5 for every skill level")
 var item = function(name, value, use){
   this.name = name;
   this.value = value+" gp";
@@ -56,13 +56,23 @@ const container = new PIXI.Container();
 const BattleBackground = new PIXI.Graphics();
 var combatmob = moblist[0]
 let sprite1
+slimepassive = PIXI.Texture.from('Mob_Animation/Slime/Slime-Green-Slice-1.png');
+slimepassive2 = PIXI.Texture.from('Mob_Animation/Slime/Slime-Green-Slice-11.png')
+slimeattacked = PIXI.Texture.from('Mob_Animation/Slime/Slime-Green-Slice-2.png');
+slimehit = PIXI.Texture.from('Mob_Animation/Slime/Slime-Green-Slice-3.png');
+slimedead = PIXI.Texture.from('Mob_Animation/Slime/Slime-Green-Slice-5.png');
+slimehpup = PIXI.Texture.from('Mob_Animation/Slime/Slime-Green-Slice-6.png');
+slimedefup = PIXI.Texture.from('Mob_Animation/Slime/Slime-Green-Slice-7.png')
+slimeatkup = PIXI.Texture.from('Mob_Animation/Slime/Slime-Green-Slice-8.png')
+slimeatk1 = PIXI.Texture.from('Mob_Animation/Slime/Slime-Green-Slice-10.png')
+slimeatk2 = PIXI.Texture.from('Mob_Animation/Slime/Slime-Green-Slice-9.png')
 if(combatmob = slime){
-  sprite1 = PIXI.Sprite.from('Slime-Green-Slice1.png');
+  sprite1 = new PIXI.Sprite(slimepassive)
 }
 
 
-sprite1.scale.x = 0.25
-sprite1.scale.y = 0.25
+sprite1.scale.x = 2
+sprite1.scale.y = 2
 sprite1.x = 1000
 sprite1.y = 150
 const sprite2 = PIXI.Sprite.from('player_character_placeholder.png')
@@ -114,9 +124,11 @@ sprite1.on('mousedown', ()=>{
   if(attackchance < 5){
     updateText2("Miss")
     sprite1.eventMode = "passive"
+
   }
   else{
     updateText2("Hit")
     sprite1.eventMode = "Passive"
+    sprite1.Texture = slimehit
   }
 })
